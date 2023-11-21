@@ -239,44 +239,25 @@ const EventSection = () => {
           Web3 Events
         </Typography>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image="/static/images/events/web3-event-1.jpg" // Replace with actual image paths
-                  alt="Web3 Event"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Global Web3 Conference
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Join the leading minds in the Web3 space to discuss the
-                    future of the internet.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    size="small"
-                    color="primary"
-                    startIcon={<EventIcon />}
-                  >
-                    Learn More
-                  </Button>
-                  <Button
-                    size="small"
-                    color="primary"
-                    startIcon={<LocationOnIcon />}
-                  >
-                    Location
-                  </Button>
-                </CardActions>
-              </CardActionArea>
-            </Card>
+          <Grid item xs={12} sm={6} md={6}>
+            <img
+              src="/assets/web3-event.jpg"
+              alt="Web3 Event"
+              style={{ width: "100%", height: "auto" }}
+            />
           </Grid>
-          {/* Repeat for other events */}
+          <Grid item xs={12} sm={6} md={6}>
+            <Typography gutterBottom variant="h5" component="div">
+              Global Web3 Conference
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Join the leading minds in the Web3 space to discuss the future of
+              the internet.
+            </Typography>
+            <Button size="small" color="primary">
+              Learn More
+            </Button>
+          </Grid>
         </Grid>
       </Box>
     </Container>
@@ -291,44 +272,22 @@ const HackathonSection = () => {
           Hackathon in Foreign Countries
         </Typography>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image="/static/images/hackathons/hackathon-1.jpg" // Replace with actual image paths
-                  alt="Hackathon Event"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    International Hackathon
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Collaborate with international developers to build the next
-                    big Web3 innovation.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    size="small"
-                    color="primary"
-                    startIcon={<EventIcon />}
-                  >
-                    Learn More
-                  </Button>
-                  <Button
-                    size="small"
-                    color="primary"
-                    startIcon={<LocationOnIcon />}
-                  >
-                    Location
-                  </Button>
-                </CardActions>
-              </CardActionArea>
-            </Card>
+          <Grid item xs={12} sm={6} md={6}>
+            <Typography gutterBottom variant="h5" component="div">
+              International Hackathon
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Collaborate with international developers to build the next big
+              Web3 innovation.
+            </Typography>
           </Grid>
-          {/* Repeat for other hackathons */}
+          <Grid item xs={12} sm={6} md={6}>
+            <img
+              src="/assets/hackathon.jpg"
+              alt="Hackathon Event"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </Grid>
         </Grid>
       </Box>
     </Container>
