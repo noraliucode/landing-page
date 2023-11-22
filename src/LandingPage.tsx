@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   AppBar,
   Toolbar,
@@ -47,7 +47,7 @@ const Header = () => {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Web3 Frontend
+          TheWeb3Frontend
         </Typography>
         <Button color="inherit">Intro</Button>
         <Button color="inherit">Curriculum</Button>
@@ -202,6 +202,30 @@ const FAQSection = () => {
 };
 
 const GetStartedSection = () => {
+  // Explicitly define the type of the ref as HTMLDivElement
+  const scriptContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Check if the ref is attached to a DOM element
+    if (scriptContainerRef.current) {
+      // Create a script element
+      const script = document.createElement("script");
+      script.src = "https://noraliu.ck.page/729c4aa5ae/index.js";
+      script.async = true;
+      script.dataset.uid = "729c4aa5ae";
+
+      // Append the script to the ref container
+      scriptContainerRef.current.appendChild(script);
+
+      // Clean up
+      return () => {
+        if (scriptContainerRef.current) {
+          scriptContainerRef.current.removeChild(script);
+        }
+      };
+    }
+  }, []);
+
   return (
     <Container maxWidth="md">
       <Box py={4} textAlign="center">
@@ -212,20 +236,14 @@ const GetStartedSection = () => {
           Ready to take the next step in your career? Join our Web3 Frontend
           Engineering Bootcamp today.
         </Typography>
-
-        <form noValidate autoComplete="off">
-          <Box display="flex" justifyContent="center" mt={2}>
-            <TextField label="Email Address" variant="outlined" />
-            <Button
-              variant="contained"
-              color="primary"
-              size="large"
-              style={{ marginLeft: 16 }}
-            >
-              Get Started
-            </Button>
+        <Container maxWidth="md">
+          <Box py={4} textAlign="center">
+            {/* Other content */}
+            <div ref={scriptContainerRef}></div>{" "}
+            {/* Script will be loaded here */}
           </Box>
-        </form>
+        </Container>
+        <div ref={scriptContainerRef}></div> {/* Script will be loaded here */}
       </Box>
     </Container>
   );
