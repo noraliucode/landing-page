@@ -18,12 +18,13 @@ import {
   AccordionSummary,
   TextField,
   CardActions,
+  IconButton,
 } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import EventIcon from "@mui/icons-material/Event";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const theme = createTheme({
   palette: {
@@ -97,20 +98,47 @@ const IntroSection = () => {
   );
 };
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <Paper sx={{ p: 6, mt: 8 }} component="footer">
-      <Typography variant="h6" align="center" gutterBottom>
-        Footer
-      </Typography>
+    <Paper sx={{ p: 6, mt: 8, backgroundColor: "#424242" }} component="footer">
       <Typography
-        variant="subtitle1"
+        variant="h6"
         align="center"
-        color="text.secondary"
-        component="p"
+        gutterBottom
+        sx={{ color: "#fff" }}
       >
-        Something here to give the footer a purpose!
+        Follow Us
       </Typography>
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <Link
+          href="https://www.instagram.com/noraliu.code/"
+          target="_blank"
+          rel="noopener"
+          sx={{
+            textDecoration: "none",
+            color: "#fff",
+            "&:hover": { color: "#bbdefb" },
+          }}
+        >
+          <IconButton color="primary">
+            <InstagramIcon fontSize="large" />
+          </IconButton>
+        </Link>
+        <Link
+          href="https://github.com/TheWeb3Frontend"
+          target="_blank"
+          rel="noopener"
+          sx={{
+            textDecoration: "none",
+            color: "#fff",
+            "&:hover": { color: "#bbdefb" },
+          }}
+        >
+          <IconButton color="primary">
+            <GitHubIcon fontSize="large" />
+          </IconButton>
+        </Link>
+      </Box>
     </Paper>
   );
 };
