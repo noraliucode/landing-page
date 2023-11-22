@@ -458,12 +458,51 @@ const HackathonSection = () => {
   );
 };
 
+const AboutSection = () => {
+  return (
+    <Container
+      maxWidth="md"
+      id="aboutSection"
+      style={{ paddingTop: "40px", paddingBottom: "40px" }}
+    >
+      <Grid container spacing={4} alignItems="center">
+        <Grid item xs={12} sm={6} md={6} display="flex" justifyContent="center">
+          <Box
+            component="img"
+            sx={{
+              height: 200,
+              width: 200,
+              borderRadius: "50%", // Creates the circle shape
+            }}
+            alt="Your Name"
+            src="/assets/about.jpg" // Replace with your image path
+          />
+        </Grid>
+        <Grid item xs={12} sm={6} md={6}>
+          <Typography variant="h4" gutterBottom>
+            About The Mentor
+          </Typography>
+          <Typography variant="subtitle1" paragraph>
+            a career switcher with over seven years of experience in React and
+            React Native development, successfully pivoted into the Web3 space,
+            joining a startup and securing a 1.5 million TWD offer within three
+            years. My expertise lies in React and Web3 application development.
+            {/* Add more personal details or professional information here */}
+          </Typography>
+          {/* You can add more paragraphs or elements as needed */}
+        </Grid>
+      </Grid>
+    </Container>
+  );
+};
+
 const LandingPage = () => {
   return (
     <ThemeProvider theme={theme}>
       <Header />
       <main>
         <IntroSection />
+        <AboutSection />
         <CurriculumSection />
         <EventSection />
         <HackathonSection />
