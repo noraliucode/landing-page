@@ -55,6 +55,9 @@ const Header = () => {
         <ScrollLink to="introSection" smooth duration={500}>
           <Button color="inherit">Intro</Button>
         </ScrollLink>
+        <ScrollLink to="aboutSection" smooth duration={500}>
+          <Button color="inherit">About</Button>
+        </ScrollLink>
         <ScrollLink to="curriculumSection" smooth duration={500}>
           <Button color="inherit">Curriculum</Button>
         </ScrollLink>
@@ -95,13 +98,16 @@ const IntroSection = () => {
                 Study online, with flexible payment options and the full support
                 of industry pros and career mentors.
               </Typography>
-              <Button
-                variant="contained"
-                color="primary"
-                endIcon={<ArrowForwardIcon />}
-              >
-                Learn More
-              </Button>
+
+              <ScrollLink to="curriculumSection" smooth duration={500}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  endIcon={<ArrowForwardIcon />}
+                >
+                  Learn More
+                </Button>
+              </ScrollLink>
             </Box>
           </Container>
         </Box>
