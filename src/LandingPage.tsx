@@ -115,6 +115,139 @@ const Footer = () => {
   );
 };
 
+const CourseContent: React.FC = () => {
+  return (
+    <div>
+      {/* Month 1 */}
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography>
+            Month 1: Fundamentals of Web3 and Frontend Development
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Week 1-2: Introduction to Web3
+            <ul>
+              <li>
+                Overview of Web3, Blockchain, and Decentralized Applications
+                (DApps)
+              </li>
+              <li>
+                Understanding Ethereum, Smart Contracts, and Decentralized
+                Finance (DeFi)
+              </li>
+              <li>Basic concepts of cryptocurrency and wallets</li>
+            </ul>
+            Week 3-4: Basics of Frontend Development
+            <ul>
+              <li>HTML5 and CSS3 for building web pages</li>
+              <li>JavaScript fundamentals</li>
+              <li>
+                Introduction to React.js (or Vue.js/Angular as alternatives)
+              </li>
+              <li>Setting up a development environment</li>
+            </ul>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      {/* Month 2 */}
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography>
+            Month 2: Advanced Frontend Development and Web3 Integration
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Week 5-6: Advanced JavaScript and Frontend Frameworks
+            <ul>
+              <li>
+                Deep dive into React.js components, state management, and hooks
+              </li>
+              <li>
+                Responsive web design and CSS frameworks like Bootstrap or
+                Tailwind CSS
+              </li>
+              <li>Introduction to TypeScript for better code structure</li>
+            </ul>
+            Week 7-8: Integrating Web3 with Frontend
+            <ul>
+              <li>Web3.js or Ethers.js libraries to interact with Ethereum</li>
+              <li>Connecting a frontend to smart contracts</li>
+              <li>
+                Handling cryptocurrency transactions and wallet integration
+              </li>
+              <li>Building a simple DApp interface</li>
+            </ul>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      {/* Month 3 */}
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography>
+            Month 3: Real-world Applications and Project Work
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Week 9-10: Building a Complete DApp
+            <ul>
+              <li>Project: Develop a basic Decentralized Application</li>
+              <li>Implementing smart contract interactions</li>
+              <li>Integrating frontend with blockchain functionality</li>
+              <li>Testing and debugging DApps</li>
+            </ul>
+            Week 11-12: Advanced Topics and Course Conclusion
+            <ul>
+              <li>
+                Advanced Web3 concepts: Oracles, Layer 2 solutions, and
+                cross-chain functionality
+              </li>
+              <li>Security best practices in DApps</li>
+              <li>Performance optimization</li>
+              <li>
+                Final project: Building a comprehensive DApp incorporating
+                learned concepts
+              </li>
+            </ul>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      {/* Supplementary Resources and Evaluation */}
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography>Supplementary Resources and Evaluation</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Supplementary Resources:
+            <ul>
+              <li>Weekly coding exercises and assignments</li>
+              <li>Guest lectures from industry experts</li>
+              <li>Online resources and communities for support</li>
+              <li>Continuous assessment through quizzes and mini-projects</li>
+            </ul>
+            Evaluation:
+            <ul>
+              <li>Regular assessments after each module</li>
+              <li>Final project evaluation</li>
+              <li>
+                Peer reviews and code sharing sessions for collaborative
+                learning
+              </li>
+            </ul>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+    </div>
+  );
+};
+
 const CurriculumSection = () => {
   return (
     <Container maxWidth="md">
@@ -122,31 +255,7 @@ const CurriculumSection = () => {
         <Typography variant="h4" component="h2" gutterBottom>
           Curriculum - The Path to Becoming a Web3 Engineer
         </Typography>
-        <Grid container spacing={2}>
-          {/* Example card for part of the curriculum */}
-          <Grid item xs={12} sm={6} md={4}>
-            <Card>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image="/static/images/cards/contemplative-reptile.jpg"
-                  alt="contemplative reptile"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Participate in Open Source Projects
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Get hands-on experience by contributing to real-world
-                    software.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-          {/* You can add more cards for different parts of the curriculum */}
-        </Grid>
+        <CourseContent />
       </Box>
     </Container>
   );
