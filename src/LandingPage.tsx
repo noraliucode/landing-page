@@ -421,9 +421,6 @@ const EventSection = () => {
               Join the leading minds in the Web3 space to discuss the future of
               the internet.
             </Typography>
-            <Button size="small" color="primary">
-              Learn More
-            </Button>
           </Grid>
         </Grid>
       </Box>
