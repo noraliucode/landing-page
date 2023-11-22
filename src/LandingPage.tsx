@@ -19,6 +19,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { Link as ScrollLink } from "react-scroll";
 
 const theme = createTheme({
   palette: {
@@ -51,11 +52,21 @@ const Header = () => {
             Web3Frontend
           </span>
         </Typography>
-        <Button color="inherit">Intro</Button>
-        <Button color="inherit">Curriculum</Button>
-        <Button color="inherit">Outcomes</Button>
-        <Button color="inherit">Q & A</Button>
-        <Button color="inherit">Get Started</Button>
+        <ScrollLink to="introSection" smooth duration={500}>
+          <Button color="inherit">Intro</Button>
+        </ScrollLink>
+        <ScrollLink to="curriculumSection" smooth duration={500}>
+          <Button color="inherit">Curriculum</Button>
+        </ScrollLink>
+        <ScrollLink to="outcomesSection" smooth duration={500}>
+          <Button color="inherit">Outcomes</Button>
+        </ScrollLink>
+        <ScrollLink to="faqSection" smooth duration={500}>
+          <Button color="inherit">Q & A</Button>
+        </ScrollLink>
+        <ScrollLink to="getStartedSection" smooth duration={500}>
+          <Button color="inherit">Get Started</Button>
+        </ScrollLink>
       </Toolbar>
     </AppBar>
   );
@@ -71,7 +82,7 @@ const IntroSection = () => {
         height: "65vh",
       }}
     >
-      <Container maxWidth="md">
+      <Container maxWidth="md" id="introSection">
         <Box py={4}>
           {" "}
           {/* Optional overlay */}
@@ -279,7 +290,7 @@ const CourseContent: React.FC = () => {
 
 const CurriculumSection = () => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" id="curriculumSection">
       <Box py={4}>
         <Typography variant="h4" component="h2" gutterBottom>
           Curriculum - The Path to Becoming a Web3 Engineer
@@ -292,7 +303,7 @@ const CurriculumSection = () => {
 
 const OutcomesSection = () => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" id="outcomesSection">
       <Box py={4}>
         <Typography variant="h4" component="h2" gutterBottom>
           Outcomes - Your Future After the Bootcamp
@@ -309,7 +320,7 @@ const OutcomesSection = () => {
 
 const FAQSection = () => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" id="faqSection">
       <Box py={4}>
         <Typography variant="h4" component="h2" gutterBottom>
           Frequently Asked Questions
@@ -365,7 +376,7 @@ const GetStartedSection = () => {
   }, []);
 
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" id="getStartedSection">
       <Box py={4} textAlign="center">
         <Typography variant="h4" component="h2" gutterBottom>
           Get Started - Join the Bootcamp
