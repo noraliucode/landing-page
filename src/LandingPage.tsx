@@ -42,7 +42,14 @@ const Header = () => {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          TheWeb3Frontend
+          <span>The</span>
+          <span
+            style={{
+              fontWeight: "bold",
+            }}
+          >
+            Web3Frontend
+          </span>
         </Typography>
         <Button color="inherit">Intro</Button>
         <Button color="inherit">Curriculum</Button>
