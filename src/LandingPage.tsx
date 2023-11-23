@@ -18,7 +18,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Link as ScrollLink } from "react-scroll";
-import Header from "./components/Header";
+import Header, { HEADER_HEIGHT } from "./components/Header";
 
 const theme = createTheme({
   palette: {
@@ -45,6 +45,7 @@ const IntroSection = () => {
         backgroundSize: "cover",
         color: "black", // Adjust text color for readability
         height: "65vh",
+        paddingTop: HEADER_HEIGHT,
       }}
     >
       <Container maxWidth="md" id="introSection">
