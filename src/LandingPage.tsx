@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import {
-  AppBar,
-  Toolbar,
   Typography,
   Button,
   Container,
@@ -20,6 +18,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Link as ScrollLink } from "react-scroll";
+import Header from "./components/Header";
 
 const theme = createTheme({
   palette: {
@@ -37,43 +36,6 @@ const theme = createTheme({
     },
   },
 });
-
-const Header = () => {
-  return (
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          <span>The</span>
-          <span
-            style={{
-              fontWeight: "bold",
-            }}
-          >
-            Web3Frontend
-          </span>
-        </Typography>
-        <ScrollLink to="introSection" smooth duration={500}>
-          <Button color="inherit">Intro</Button>
-        </ScrollLink>
-        <ScrollLink to="aboutSection" smooth duration={500}>
-          <Button color="inherit">About</Button>
-        </ScrollLink>
-        <ScrollLink to="curriculumSection" smooth duration={500}>
-          <Button color="inherit">Curriculum</Button>
-        </ScrollLink>
-        <ScrollLink to="outcomesSection" smooth duration={500}>
-          <Button color="inherit">Outcomes</Button>
-        </ScrollLink>
-        <ScrollLink to="faqSection" smooth duration={500}>
-          <Button color="inherit">Q & A</Button>
-        </ScrollLink>
-        <ScrollLink to="getStartedSection" smooth duration={500}>
-          <Button color="inherit">Get Started</Button>
-        </ScrollLink>
-      </Toolbar>
-    </AppBar>
-  );
-};
 
 const IntroSection = () => {
   return (
