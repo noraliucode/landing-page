@@ -13,6 +13,8 @@ import {
 } from "@mui/material";
 import { Link as ScrollLink } from "react-scroll";
 
+export const HEADER_HEIGHT = 56;
+
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -21,7 +23,13 @@ const Header = () => {
   };
 
   const DrawerLink = ({ to, children }: { to: string; children: string }) => (
-    <ScrollLink to={to} smooth duration={500} onClick={handleDrawerToggle}>
+    <ScrollLink
+      to={to}
+      smooth
+      duration={500}
+      onClick={handleDrawerToggle}
+      offset={-HEADER_HEIGHT}
+    >
       <ListItem
         sx={{
           cursor: "pointer",
@@ -53,7 +61,13 @@ const Header = () => {
         <Box sx={{ display: { xs: "none", sm: "block" } }}>
           {/* Desktop Links */}
           {LinksInfo.map((link, index) => (
-            <ScrollLink to={link.to} smooth duration={500} key={link.text}>
+            <ScrollLink
+              to={link.to}
+              smooth
+              duration={500}
+              key={link.text}
+              offset={-HEADER_HEIGHT}
+            >
               <Button color="inherit">{link.text}</Button>
             </ScrollLink>
           ))}
