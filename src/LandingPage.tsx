@@ -55,11 +55,10 @@ const IntroSection = () => {
           <Container maxWidth="md">
             <Box py={4}>
               <Typography variant="h4" component="h2" gutterBottom>
-                Start Your Remote Life
+                開啟你的遠距生活：Web3前端課
               </Typography>
               <Typography variant="subtitle1" paragraph>
-                Study online, with flexible payment options and the full support
-                of industry pros and career mentors.
+                你的工程師生涯從這裡開始！線上學習、用最適合你的步調前進。
               </Typography>
 
               <ScrollLink to="curriculumSection" smooth duration={500}>
@@ -68,7 +67,7 @@ const IntroSection = () => {
                   color="primary"
                   endIcon={<ArrowForwardIcon />}
                 >
-                  Learn More
+                  了解課程
                 </Button>
               </ScrollLink>
             </Box>
@@ -262,7 +261,7 @@ const CurriculumSection = () => {
     <Container maxWidth="md" id="curriculumSection">
       <Box py={4}>
         <Typography variant="h4" component="h2" gutterBottom>
-          Curriculum - The Path to Becoming a Web3 Engineer
+          課程大綱 - 成為Web3開發者
         </Typography>
         <CourseContent />
       </Box>
@@ -449,13 +448,11 @@ const AboutSection = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
           <Typography variant="h4" gutterBottom>
-            About The Mentor
+            關於講師
           </Typography>
           <Typography variant="subtitle1" paragraph>
-            a career switcher with over seven years of experience in React and
-            React Native development, successfully pivoted into the Web3 space,
-            joining a startup and securing a 1.5 million TWD offer within three
-            years. My expertise lies in React and Web3 application development.
+            Web3開發者，擁有超過七年的React和React
+            Native開發經驗，在成功轉向Web3領域後，加入新創公司，三年內獲得150萬以上新台幣的年薪。專精於React和Web3應用開發。
             {/* Add more personal details or professional information here */}
           </Typography>
           {/* You can add more paragraphs or elements as needed */}
