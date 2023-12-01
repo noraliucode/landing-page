@@ -55,7 +55,7 @@ const IntroSection = () => {
           <Container maxWidth="md">
             <Box py={4}>
               <Typography variant="h4" component="h2" gutterBottom>
-                開啟你的遠距生活：Web3前端課
+                開啟你的遠距生活：Web3 前端課
               </Typography>
               <Typography variant="subtitle1" paragraph>
                 你的工程師生涯從這裡開始！線上學習、用最適合你的步調前進。
@@ -261,7 +261,7 @@ const CurriculumSection = () => {
     <Container maxWidth="md" id="curriculumSection">
       <Box py={4}>
         <Typography variant="h4" component="h2" gutterBottom>
-          課程大綱 - 成為Web3開發者
+          課程大綱 - 成為 Web3 開發者
         </Typography>
         <CourseContent />
       </Box>
@@ -451,8 +451,9 @@ const AboutSection = () => {
             關於講師
           </Typography>
           <Typography variant="subtitle1" paragraph>
-            Web3開發者，擁有超過七年的React和React
-            Native開發經驗，在成功轉向Web3領域後，加入新創公司，三年內獲得150萬以上新台幣的年薪。專精於React和Web3應用開發。
+            設計系轉行成為 Web3 開發者，擁有超過七年的 React 和 React Native
+            開發經驗，在成功轉向 Web3 領域後，加入新創公司，三年內獲得 150
+            萬以上新台幣的年薪。專精於 React 和 Web3 應用開發。
             {/* Add more personal details or professional information here */}
           </Typography>
           {/* You can add more paragraphs or elements as needed */}
