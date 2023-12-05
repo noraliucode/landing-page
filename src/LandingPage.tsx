@@ -291,7 +291,7 @@ const FAQSection = () => {
     <Container maxWidth="md" id="faqSection">
       <Box py={4}>
         <Typography variant="h4" component="h2" gutterBottom>
-          Frequently Asked Questions
+          常見問題
         </Typography>
         <div>
           {/* Example accordion for FAQ item */}
@@ -301,13 +301,13 @@ const FAQSection = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>What is Web3?</Typography>
+              <Typography>誰適合本課程？</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Web3 refers to the new iteration of the World Wide Web based on
-                blockchain technology, featuring decentralization and
-                token-based economics.
+                適合非「電腦科學」（computer
+                science）本科的初學者、想要轉行成為軟體工程師、或已經有Web2基礎，
+                想學習Web3前端者
               </Typography>
             </AccordionDetails>
           </Accordion>
