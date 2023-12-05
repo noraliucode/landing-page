@@ -11,6 +11,7 @@ import {
   AccordionDetails,
   AccordionSummary,
   IconButton,
+  styled,
 } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -19,6 +20,17 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Link as ScrollLink } from "react-scroll";
 import Header, { HEADER_HEIGHT } from "./components/Header";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+  TooltipProps,
+} from "recharts";
 
 const theme = createTheme({
   palette: {
@@ -36,6 +48,12 @@ const theme = createTheme({
     },
   },
 });
+
+const Caption = styled("div")(() => ({
+  textAlign: "center",
+  fontSize: 14,
+  color: "gray",
+}));
 
 const IntroSection = () => {
   return (
@@ -270,15 +288,95 @@ const CurriculumSection = () => {
 };
 
 const OutcomesSection = () => {
+  type SalaryData = {
+    name: string;
+    salary: number;
+  };
+
+  // Sample data
+  const data: SalaryData[] = [
+    { name: "Min", salary: 51100 },
+    { name: "Avg", salary: 126375 },
+    { name: "Max", salary: 230000 },
+  ];
+
+  // Formatter for the bar chart values
+  const formatCurrency = (value: number) => {
+    return value.toLocaleString(); // This will add commas as thousand separators
+  };
+
+  // Custom tooltip content
+  const CustomTooltip = ({
+    active,
+    payload,
+    label,
+  }: TooltipProps<number, string>) => {
+    if (active && payload && payload.length) {
+      return (
+        <Paper style={{ padding: "10px" }}>
+          <Typography color="textSecondary">
+            {label}: ${formatCurrency(payload[0].value as number)}
+          </Typography>
+        </Paper>
+      );
+    }
+
+    return null;
+  };
+
+  const SalaryBarChart: React.FC = () => {
+    return (
+      <Paper style={{ padding: "20px", margin: "20px" }}>
+        <ResponsiveContainer width="100%" height={400}>
+          <BarChart
+            data={data}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis tickFormatter={formatCurrency} />
+            <Tooltip content={<CustomTooltip />} />
+            <Legend />
+            <Bar dataKey="salary" fill="#8884d8" />
+          </BarChart>
+        </ResponsiveContainer>
+      </Paper>
+    );
+  };
+
   return (
     <Container maxWidth="md" id="outcomesSection">
       <Box py={4}>
         <Typography variant="h4" component="h2" gutterBottom>
-          Outcomes - Your Future After the Bootcamp
+          結訓 - 訓練營結束後，您的未來
         </Typography>
         <Typography variant="subtitle1" paragraph>
-          Learn what you'll be able to achieve after completing the bootcamp and
-          how it will propel your career forward.
+          幫助學生開啟 Web3
+          開發者的職涯之路。我們不僅幫助您獲得聘用，我們還為您的終身職業生涯奠定基礎。
+          我們在畢業一年或更長時間後衡量學生的成績。一切都從這裡開始。
+          <SalaryBarChart />
+          <Caption>
+            <Link
+              href="https://web3.career/frontend-engineer-okaybears/54885"
+              target="_blank"
+              rel="noopener"
+              sx={{
+                color: "#8884d8",
+                "&:hover": { textDecoration: "none" },
+              }}
+            >
+              web3.career
+            </Link>
+            <Typography>
+              前端開發人員的平均年薪為 12.6 萬美元，最低基本工資為 51,000
+              美元，最高為 23 萬美元。
+            </Typography>
+          </Caption>
         </Typography>
         {/* Additional content and imagery would go here */}
       </Box>
@@ -475,7 +573,7 @@ const LandingPage = () => {
         <HackathonSection />
         <OutcomesSection />
         <FAQSection />
-        <GetStartedSection />
+        {/* <GetStartedSection /> */}
       </main>
       <Footer />
     </ThemeProvider>
