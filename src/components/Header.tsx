@@ -44,7 +44,6 @@ const Header = () => {
   );
 
   const LinksInfo = [
-    { text: "Intro", to: "introSection" },
     { text: "About", to: "aboutSection" },
     { text: "Curriculum", to: "curriculumSection" },
     { text: "Outcomes", to: "outcomesSection" },
