@@ -448,8 +448,7 @@ const GetStartedSection = () => {
           啟程 - 了解更多課程資訊
         </Typography>
         <Typography variant="subtitle1" paragraph>
-          準備好邁出職涯的下一步了嗎？ 加入我們的 Web3
-          前端課，訂閱週報獲得更多資訊
+          準備好邁出職涯的下一步了嗎？ 訂閱「Web3前端課」週報獲得更多資訊
         </Typography>
         <Container maxWidth="md">
           <Box py={4} textAlign="center">
