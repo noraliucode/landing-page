@@ -573,7 +573,7 @@ const LandingPage = () => {
         <HackathonSection />
         <OutcomesSection />
         <FAQSection />
-        {/* <GetStartedSection /> */}
+        <GetStartedSection />
       </main>
       <Footer />
     </ThemeProvider>
