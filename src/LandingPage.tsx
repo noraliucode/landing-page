@@ -347,11 +347,11 @@ const GetStartedSection = () => {
     <Container maxWidth="md" id="getStartedSection">
       <Box py={4} textAlign="center">
         <Typography variant="h4" component="h2" gutterBottom>
-          Get Started - Join the Bootcamp
+          啟程 - 了解更多課程資訊
         </Typography>
         <Typography variant="subtitle1" paragraph>
-          Ready to take the next step in your career? Join our Web3 Frontend
-          Engineering Bootcamp today.
+          準備好邁出職涯的下一步了嗎？ 加入我們的 Web3
+          前端課，訂閱週報獲得更多資訊
         </Typography>
         <Container maxWidth="md">
           <Box py={4} textAlign="center">
